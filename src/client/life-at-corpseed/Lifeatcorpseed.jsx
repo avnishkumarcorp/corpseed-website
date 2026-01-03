@@ -27,7 +27,7 @@ const Lifeatcorpseed = () => {
       </section>
 
       {/* INTRO */}
-      <section className="py-20 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-4">
             Meet the People who power <span className="text-blue-600">Corpseed</span>
@@ -70,7 +70,7 @@ const Lifeatcorpseed = () => {
           reverse: true,
         },
       ].map((item, index) => (
-        <section key={index} className="py-16 px-6">
+        <section key={index} className="py-8 px-6">
           <div
             className={`max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center ${
               item.reverse ? "md:flex-row-reverse" : ""
@@ -113,7 +113,7 @@ const Lifeatcorpseed = () => {
       </div>
 
       {/* COMMUNITY SECTION */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-white py-8 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-4">
             Our Communities Inspire Our Progress
@@ -128,12 +128,12 @@ const Lifeatcorpseed = () => {
               {
                 title: "Diversity & Inclusion",
                 desc: "We celebrate differences in culture, thought, and experience.",
-                image: "/culture1.jpg",
+                image: "https://corpseed-main.s3.ap-south-1.amazonaws.com/corpseed/aerial-view-business-team_(1).jpg",
               },
               {
                 title: "Company Culture",
                 desc: "Our values define how we work, collaborate, and grow.",
-                image: "/culture2.jpg",
+                image: "https://corpseed-main.s3.ap-south-1.amazonaws.com/corpseed/SM_(226).jpg",
               },
             ].map((item) => (
               <div

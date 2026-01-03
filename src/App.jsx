@@ -1,14 +1,11 @@
- import {  Outlet } from "react-router-dom"
-import Header from "./client/header/Header"
-import Footer from "./client/footer/Footer"
+ import { Routes } from "react-router-dom"
+import ClientRouter from "./routes/ClientRouter"
  const App = () => {
   
   return (
-    <div className="w-full min-h-screen" >
-      <Header/>
-      <Outlet/>
-      <Footer/>
-    </div>
+    <Routes>
+      {ClientRouter()}
+    </Routes>
   )
 }
 

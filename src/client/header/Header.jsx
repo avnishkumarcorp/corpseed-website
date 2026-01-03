@@ -46,8 +46,7 @@ const Header = () => {
             <div className="flex justify-center items-center">
               <p>Search</p>
             </div>
-            
-            <p className="m-5 font-semibold">All <p>Corpseed</p></p>
+            <p className="m-5 font-semibold">All Corpseed</p>
           </div>
         </div>
 
