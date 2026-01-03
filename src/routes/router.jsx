@@ -3,6 +3,7 @@ import App from "../App.jsx";
 import Home from "../client/Home/Home.jsx";
 import About from "../client/about/About.jsx";
 import Lifeatcorpseed from "../client/life-at-corpseed/Lifeatcorpseed.jsx";
+import ContactUs from "../client/contact/Contact.jsx";
 export const approuter = createBrowserRouter([
   {
     path:"/",
@@ -18,6 +19,10 @@ export const approuter = createBrowserRouter([
       {
         path:"/life-at-corpseed",
         element:<Lifeatcorpseed/>
+      },
+      {
+        path:"/contact-us",
+        element:<ContactUs/>
       }
     ]
   }
