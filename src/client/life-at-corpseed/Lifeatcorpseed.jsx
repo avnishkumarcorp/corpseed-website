@@ -1,6 +1,6 @@
 import banner from "../../assets/corpseed-banner.webp"
 
-const Lifeatcorpseed = () => {
+const LifeAtCorpseed = () => {
   return (
     <div className="w-full bg-slate-50 text-slate-800">
 
@@ -161,4 +161,4 @@ const Lifeatcorpseed = () => {
   );
 }
 
-export default Lifeatcorpseed
+export default LifeAtCorpseed

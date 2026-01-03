@@ -1,4 +1,4 @@
-const HeadingofPage = () => {
+const HeadingOfPage = () => {
   return (
     <div>
       <section className="py-12 bg-gray-50">
@@ -183,4 +183,4 @@ const HeadingofPage = () => {
   );
 };
 
-export default HeadingofPage;
+export default HeadingOfPage;

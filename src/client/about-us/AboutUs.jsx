@@ -1,7 +1,7 @@
 import React from "react";
-import HeadingofPage from "./HeadingofPage";
+import HeadingOfPage from "./HeadingofPage";
 
-const About = () => {
+const AboutUs = () => {
   return (
     <>
       <section className="flex flex-col lg:flex-row items-stretch p-6 max-w-7xl mx-auto gap-6">
@@ -129,10 +129,10 @@ const About = () => {
   </div>
      </section>
 
-     <HeadingofPage />
+     <HeadingOfPage />
 
     </>
   );
 };
 
-export default About;
+export default AboutUs;
