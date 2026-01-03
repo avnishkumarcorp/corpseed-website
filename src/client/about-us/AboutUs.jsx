@@ -10,7 +10,7 @@ const AboutUs = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
             Our values define who we are & what we stand for
           </h1>
-          <p className="text-gray-700 text-base md:text-lg">
+          <p className="text-gray-700 text-base md:text-lg text-justify">
             The journey of Corpseed started with a simple thought: why do
             companies fail even after having a great idea, good execution plan,
             and cash flow. Why investors are worried about investing in Indian
@@ -61,76 +61,70 @@ const AboutUs = () => {
       </section>
       <section className="mx-auto max-w-7xl p-6">
         <div className="flex flex-col md:flex-row items-stretch gap-6 bg-white shadow-lg rounded-lg overflow-hidden border border-blue-500 p-5">
-          
-
           <div className="flex-1 flex items-center p-6 text-gray-700">
             <p className="text-sm md:text-base lg:text-lg leading-relaxed p-2">
-              By focusing on reducing our customers compliance cost, we will achieve & sustain a positive growth and profitability.  
+              By focusing on reducing our customers compliance cost, we will
+              achieve & sustain a positive growth and profitability.
             </p>
 
             <div className="bg-blue-500 text-white flex-1 flex items-center p-6 rounded-sm">
-            <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed text-left ">
-              <h2>Our Vision</h2>
-              <br /> Reducing
-              <br />  compliance cost 
-            </p>
-          </div>
+              <div className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed text-left ">
+                <h2>Our Vision</h2>
+                <br /> <h2>Reducing</h2>
+                <br /> <h2>compliance cost</h2>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-     <section className="mx-auto max-w-7xl p-6">
-  <div className="flex flex-col md:flex-row items-stretch gap-6 bg-white shadow-lg rounded-lg border border-blue-500 overflow-hidden">
+      <section className="mx-auto max-w-7xl p-6">
+        <div className="flex flex-col md:flex-row items-stretch gap-6 bg-white shadow-lg rounded-lg border border-blue-500 overflow-hidden">
+          <div className="bg-blue-500 text-white flex-1 flex items-center p-6 rounded-sm">
+            <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed text-left">
+              Our Values
+              <br /> Integrity,
+              <br /> Responsibility,
+              <br /> Accountability &
+              <br /> Continuous Improvement
+            </p>
+          </div>
 
-    
-    <div className="bg-blue-500 text-white flex-1 flex items-center p-6 rounded-sm">
-      <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed text-left">
-        Our Values
-        <br /> Integrity,
-        <br /> Responsibility,
-        <br /> Accountability &
-        <br /> Continuous Improvement
-      </p>
-    </div>
+          <div className="flex-1 flex flex-col justify-center p-6 text-gray-700 gap-4">
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify">
+              <b>Integrity</b> - We believe that nothing is more important than
+              our stakeholder’s reputation, growth, and confidentiality.
+              Behaving with the highest levels of integrity is fundamental to
+              who we are. We demonstrate a strong commitment to sustainable,
+              transparent & responsible business practices. Adhere to the
+              highest professional standards and credibility. We do what is
+              right.
+            </p>
 
-  
-    <div className="flex-1 flex flex-col justify-center p-6 text-gray-700 gap-4">
-      <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-        <b>Integrity</b> - We believe that nothing is more important than our
-        stakeholder’s reputation, growth, and confidentiality. Behaving with the highest levels of
-        integrity is fundamental to who we are. We demonstrate a strong commitment to sustainable,
-        transparent & responsible business practices. Adhere to the highest professional standards and
-        credibility. We do what is right.
-      </p>
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed">
+              <b>Responsibility & Accountability</b> - We at Corpseed are
+              personally accountable and jointly responsible for the
+              transparency, security, and on-time delivery of quality services
+              to avoid non-compliance losses for our clients.
+            </p>
 
-      <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-        <b>Responsibility & Accountability</b> - We at Corpseed are personally accountable and jointly
-        responsible for the transparency, security, and on-time delivery of quality services to avoid
-        non-compliance losses for our clients.
-      </p>
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed">
+              <b>Caring & Development</b>
+              Our caring approach complements our agility and speed. We make the
+              effort to understand every stakeholder and what matters to them.
+              We also recognize the value that each person contributes and
+              support others to grow and work in the ways that bring out their
+              best. We treat each other with respect, our motto is to create an
+              environment in which people are proud and happy to work
+            </p>
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed">
+              <b>Continuos & development-</b>
+              We never stop larning and improving.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-        <b>
-          Caring & Development
-        </b>
-        Our caring approach complements our agility and speed. We make the
-        effort to understand every stakeholder and what matters to them. We also recognize the value
-        that each person contributes and support others to grow and work in the ways that bring out
-                    their best. We treat each other with respect, our motto is to create an environment in which
-                    people are proud and happy to work
-      </p>
-      <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-        <b>
-          Continuos & development-
-        </b>
-       We never stop larning and improving.
-      </p>
-    </div>
-
-  </div>
-     </section>
-
-     <HeadingOfPage />
-
+      <HeadingOfPage />
     </>
   );
 };
