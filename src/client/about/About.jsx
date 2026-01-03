@@ -1,4 +1,5 @@
 import React from "react";
+import HeadingofPage from "./HeadingofPage";
 
 const About = () => {
   return (
@@ -127,6 +128,8 @@ const About = () => {
 
   </div>
      </section>
+
+     <HeadingofPage />
 
     </>
   );
