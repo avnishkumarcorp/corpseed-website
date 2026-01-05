@@ -4,7 +4,8 @@ import ScrollNavView_02 from "./ScrollNavView_02";
 import ScrollNavView_03 from "./ScrollNavView_03";
 import ScrollNavView_04 from "./SCrollNavView_04";
 import ScrollNavView_05 from "./ScrollNavView_05";
-import EPROverviewForm from "./ErpOverview";
+import  ErpOverview from "./ErpOverview"
+
 
 const NAV_HEIGHT = "h-16"; // 64px
 
@@ -31,14 +32,11 @@ const ScrollNavView = () => {
         </ul>
       </div>
 
-      {/* 👇 SPACER (CRITICAL — PREVENTS OVERLAP) */}
       <div className="h-16" />
 
-      {/* ===== STICKY FORM ZONE START ===== */}
       <div className="px-4 sm:px-6 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-          {/* LEFT CONTENT */}
           <div className="lg:col-span-2">
             <ScrollNavView_01 />
             <ScrollNavView_02 />
@@ -47,18 +45,15 @@ const ScrollNavView = () => {
             <ScrollNavView_05 />
           </div>
 
-          {/* RIGHT STICKY FORM */}
           <div className="hidden lg:block">
             <div className="sticky top-28">
-              <EPROverviewForm />
+              <ErpOverview />
             </div>
           </div>
 
         </div>
       </div>
-      {/* ===== STICKY FORM ZONE END ===== */}
-
-      {/* FAQ */}
+     
       <section id="faq" className="px-4 sm:px-6 lg:px-16 py-10">
         <Faq />
       </section>
