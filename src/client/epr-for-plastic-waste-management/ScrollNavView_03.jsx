@@ -4,7 +4,7 @@ const ScrollNavView_03 = () => {
   return (
     <div>
       <section
-        id="procedure"
+        id="guidelines"
         className="scroll-mt-24 px-4 sm:px-6 lg:px-16 py-10"
       >
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import intlTelInput from "intl-tel-input";
 import "intl-tel-input/build/css/intlTelInput.css";
-import ErpOverview from "../epr-for-plastic-waste-management/ErpOverview"
 import ScrollNav from "./ScrollNavView";
 
 const EPRForPlasticWasteManagement = () => {
@@ -13,8 +12,8 @@ const EPRForPlasticWasteManagement = () => {
     const iti = intlTelInput(phoneRef.current, {
       initialCountry: "in",
       separateDialCode: true,
-      loadUtils: () =>
-        import("intl-tel-input/build/js/utils.js"),
+      utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
     });
 
     return () => iti.destroy();
@@ -61,51 +60,51 @@ const EPRForPlasticWasteManagement = () => {
           </div>
 
           <p className="text-sm text-gray-600">
-            ⭐ Rated <strong>4.9</strong> Stars by <strong>69,232+</strong>{" "}
-            customers globally
+            ⭐ Rated <strong>4.9</strong> Stars by{" "}
+            <strong>69,232+</strong> customers globally
           </p>
         </div>
 
-        {/* RIGHT FORM */}
-        <div className="lg:w-1/3 w-full">
-          <div className="bg-white shadow-xl border rounded-lg p-6 space-y-6">
+        {/* RIGHT FORM (SMALL & RIGHT-ALIGNED) */}
+        <div className="w-full lg:w-[360px] lg:ml-auto">
+          <div className="bg-white border rounded-lg p-5 space-y-5">
 
-            <h3 className="text-xl font-semibold">
+            <h3 className="text-lg font-semibold text-center">
               Schedule a call back
             </h3>
 
             <input
               type="text"
               placeholder="Name *"
-              className="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 py-2"
+              className="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 py-1.5 text-sm"
             />
 
             <input
               ref={phoneRef}
               type="tel"
               placeholder="Phone Number *"
-              className="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 py-2"
+              className="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 py-1.5 text-sm"
             />
 
-            <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center justify-between text-xs">
               <span className="text-gray-600">Get updates on WhatsApp</span>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input type="checkbox" className="sr-only peer" />
-                <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600"></div>
-                <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-5"></span>
+                <div className="w-9 h-5 bg-gray-200 rounded-full peer peer-checked:bg-blue-600"></div>
+                <span className="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-4"></span>
               </label>
             </div>
 
-            <button className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition">
+            <button className="w-full bg-blue-600 text-white py-2.5 rounded-md text-sm hover:bg-blue-700 transition">
               Submit
             </button>
           </div>
         </div>
 
       </div>
-      <ErpOverview/>
-      <ScrollNav/>
-        
+
+
+      <ScrollNav />
     </div>
   );
 };

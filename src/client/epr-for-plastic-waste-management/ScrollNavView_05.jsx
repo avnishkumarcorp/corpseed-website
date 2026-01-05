@@ -3,7 +3,7 @@ import React from 'react'
 const ScrollNavView_05 = () => {
   return (
     <div>
-       <section id="steps" className="px-4 sm:px-6 lg:px-16 py-10">
+       <section id="documents" className="px-4 sm:px-6 lg:px-16 py-10">
         <div className="space-y-6 max-w-4xl">
         
           <div className="border border-blue-500 p-6 rounded-sm">
