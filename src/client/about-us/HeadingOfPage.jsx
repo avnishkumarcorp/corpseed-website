@@ -7,7 +7,7 @@ const HeadingOfPage = () => {
             Who <span className="border-b-4 border-blue-500">We</span> Are
           </p>
 
-          <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed text-justify mb-4">
+          <p className="text-gray-700 text-base md:text-lg lg:text-xl px-4 leading-relaxed text-justify mb-4">
             Through helping Indian startups & businesses mitigate regulatory
             compliance risks through robust processes and AI-driven proprietary
             technology, we simplify business compliance whilst protecting the
@@ -17,7 +17,7 @@ const HeadingOfPage = () => {
             large.
           </p>
 
-          <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed text-justify mb-4">
+          <p className="text-gray-700 text-base md:text-lg lg:text-xl px-4 leading-relaxed text-justify mb-4">
             Corpseed Ites Private Limited serves the needs of business,
             public-sector agencies, not-for-profits, and startups. Corpseed is
             committed to quality and service excellence in all that we do,
@@ -25,7 +25,7 @@ const HeadingOfPage = () => {
             actions and behaviors both professionally and personally.
           </p>
 
-          <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed text-justify">
+          <p className="text-gray-700 text-base md:text-lg lg:text-xl px-4 leading-relaxed text-justify">
             It's not just what we do at Corpseed that matters: we also pay
             attention to how we do it. Our Values are our core beliefs, guiding
             and unifying our actions and behaviors. Shared across every level
@@ -42,7 +42,7 @@ const HeadingOfPage = () => {
             for
           </p>
 
-          <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed text-justify mb-4">
+          <p className="text-gray-700 text-base md:text-lg lg:text-xl px-4 leading-relaxed text-justify mb-4">
             At Corpseed, we encourage and empower change in all we do. Every
             single day, we challenge ourselves to bring our absolute best to
             clients, to the public and to one another. We set ourselves apart
@@ -51,7 +51,7 @@ const HeadingOfPage = () => {
             tomorrow.
           </p>
 
-          <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed text-justify">
+          <p className="text-gray-700 text-base md:text-lg lg:text-xl px-4 leading-relaxed text-justify">
             It's not just what we do at Corpseed that matters: we also pay
             attention to how we do it. Our values are our core beliefs, guiding
             and unifying our actions and behaviors. Shared across every level
@@ -81,7 +81,12 @@ const HeadingOfPage = () => {
         </div>
 
         <div className="mt-8 md:mt-12">
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-5xl">
+          <p
+            className="text-base sm:text-lg md:text-xl text-gray-700 
+              px-4 sm:px-6 lg:px-0 
+              max-w-5xl mx-auto 
+              leading-relaxed"
+          >
             At Corpseed, our purpose is to build a better compliance check,
             inspire confidence and empower positive change in your business. The
             insights and quality services we provide help build trust and
@@ -94,7 +99,10 @@ const HeadingOfPage = () => {
           </p>
         </div>
         <div className="mt-8 md:mt-12">
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-5xl">
+          <p  className="text-base sm:text-lg md:text-xl text-gray-700 
+              px-4 sm:px-6 lg:px-0 
+              max-w-5xl mx-auto 
+              leading-relaxed">
             Our caring approach complements our agility and speed. We Make the
             effort to understand every individual and what matters to them.
             Recognise the value that each person contributes &amp; Support
@@ -122,7 +130,7 @@ const HeadingOfPage = () => {
               {" "}
               Startup in 2017
             </h1>
-            <p className="mr-8 mt-10">
+            <p className="mr-8 mt-10 lg:text-xl px-4">
               A small team working out of a small space in Delhi starts out
               ambitiously, offering services like startup business plan for
               funding, company incorporation, intellectual property etc., Our
@@ -134,9 +142,8 @@ const HeadingOfPage = () => {
 
       <section className="max-w-7xl mx-auto px-4 py-10 border-t border-b-2  border-blue-500">
         <div className="flex flex-col md:flex-row gap-6 items-stretch">
-          
           <div className="w-full md:w-1/2">
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed  text-justify">
               Laws were created to protect and empower us as individuals,
               families and business owners but many people don't get the help
               they need because of high fees and complexity in legal structure.
@@ -158,23 +165,24 @@ const HeadingOfPage = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-6 items-stretch mt-28">
-          
-          
-
           <div className="w-full md:w-1/2 bg-blue-500 text-white flex items-center justify-center text-xl md:text-2xl font-semibold rounded-md ">
             Our approach
           </div>
           <div className="w-full md:w-1/2  pb-6 pt-6">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-             Laws were created to protect and empower us as individuals, families and business
-                    owners but many people don't get the help they need because of high fees and complexity in legal
-                    structure. Together, we make the legal laws &amp; regulations work for you. At CorpSeed, we ensure to
-                    make change by providing legal consulting services at an affordable price, simple and available to
-                    all mankind. We are proud to say that we've been able to build services that thousands of people
-                    rely upon. Every day we spend our time and resources making it easier for people and businesses to
-                    get the legal help they needed so that they can focus on building strong businesses.Legal being an
-                    unorganized sector, most attorneys agree that much can be done and should be done to improve general
-                    access to the law by reducing cost.
+              Laws were created to protect and empower us as individuals,
+              families and business owners but many people don't get the help
+              they need because of high fees and complexity in legal structure.
+              Together, we make the legal laws &amp; regulations work for you.
+              At CorpSeed, we ensure to make change by providing legal
+              consulting services at an affordable price, simple and available
+              to all mankind. We are proud to say that we've been able to build
+              services that thousands of people rely upon. Every day we spend
+              our time and resources making it easier for people and businesses
+              to get the legal help they needed so that they can focus on
+              building strong businesses.Legal being an unorganized sector, most
+              attorneys agree that much can be done and should be done to
+              improve general access to the law by reducing cost.
             </p>
           </div>
         </div>
