@@ -31,7 +31,7 @@ const EPRForPlasticWasteManagement = () => {
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
             <span className="text-blue-600">EPR For</span> Plastic Waste
-            Management
+            <br/>Management
           </h1>
 
           <p className="text-gray-600 max-w-2xl">
@@ -66,8 +66,8 @@ const EPRForPlasticWasteManagement = () => {
         </div>
 
         {/* RIGHT FORM (SMALL & RIGHT-ALIGNED) */}
-        <div className="w-full lg:w-[360px] lg:ml-auto">
-          <div className="bg-white border rounded-lg p-5 space-y-5">
+        <div className="w-full lg:w-90 lg:ml-auto">
+          <div className="bg-white border  border-gray-300 rounded-lg p-5 space-y-5">
 
             <h3 className="text-lg font-semibold text-center">
               Schedule a call back

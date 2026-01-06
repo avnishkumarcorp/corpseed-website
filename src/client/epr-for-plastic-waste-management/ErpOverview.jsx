@@ -19,7 +19,7 @@ const EPROverviewForm = () => {
   }, []);
 
   return (
-    <div className="w-full border border-black rounded-lg p-6 bg-white">
+    <div className="w-full border border-gray-300 rounded-lg p-6 bg-white">
       <h3 className="text-center font-semibold mb-2">
         Enquiry Now for
       </h3>
