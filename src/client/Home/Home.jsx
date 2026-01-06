@@ -1,7 +1,14 @@
 import { IoCall } from "react-icons/io5";
+import { useEffect, useState } from "react";
 import LogoCarousel from "./Logo-Carousel";
 import { cardData } from "../../data2";
-import { useEffect, useState } from "react";
+import {data3} from "../../data3"
+import { data } from "react-router-dom";
+import VirtualMeetingSection from "./VirtualMetting";
+import OurSupporters from "./OurSupporter";
+import InTheNews from "./IntheNews";
+import LatestArticlesCarousel from "./LatesteArticleCarousel"
+import LatestProductsCarousel from "./LatestProductCarousel";
 
 const services = [
   {
@@ -41,9 +48,9 @@ const HeroSection = () => {
   const [activeTabData, setActiveTabData] = useState([]);
 
   useEffect(() => {
-    const result = cardData?.find((obj) => obj[activeTab]);
-    setActiveTabData(result[activeTab]);
-  }, [cardData,activeTab]);
+    const result = cardData.find((obj) => obj[activeTab]);
+    setActiveTabData(result?.[activeTab] || []);
+  }, [activeTab]);
 
   const handleNavigationData = (key, value) => {
     setActiveTab(key);
@@ -52,8 +59,9 @@ const HeroSection = () => {
 
   return (
     <>
-      {/* HERO CONTENT (CONSTRAINED) */}
+      {/* ================= HERO SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
         {/* LEFT CONTENT */}
         <div>
           <button className="flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-full text-sm mb-6">
@@ -81,7 +89,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* RIGHT CARDS */}
+        {/* RIGHT SERVICES */}
         <div className="grid grid-cols-2 gap-6">
           {services.map((item, index) => (
             <div
@@ -93,42 +101,143 @@ const HeroSection = () => {
                 alt={item.title}
                 className="w-14 h-14 mx-auto mb-3"
               />
-              <h3 className="text-center font-semibold mb-2">{item.title}</h3>
-              <p className="text-xs text-gray-500 text-center">{item.desc}</p>
+              <h3 className="text-center font-semibold mb-2">
+                {item.title}
+              </h3>
+              <p className="text-xs text-gray-500 text-center">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
       </section>
-      {/* FULL WIDTH CAROUSEL */}
+
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-12 mb-20">
         <LogoCarousel />
       </div>
-      <section>
-        <div className="flex items-center gap-1.5">
-          {cardData?.map((item, idx) => {
-            return Object.entries(item)?.map(([key, value]) => {
-              return (
-                <p onClick={() => handleNavigationData(key, value)}>
-                  {key}
-                </p>
-                
-              );
-            });
-          })}
+
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+        
+        {/* TABS */}
+        <div className="flex gap-8 border-b border-gray-200 mb-10 overflow-x-auto">
+          {cardData.map((item) =>
+            Object.entries(item).map(([key, value]) => (
+              <button
+                key={key}
+                onClick={() => handleNavigationData(key, value)}
+                className={`pb-3 text-sm font-medium whitespace-nowrap transition
+                  ${
+                    activeTab === key
+                      ? "text-blue-600 border-b-2 border-blue-600"
+                      : "text-gray-600 hover:text-blue-600"
+                  }`}
+              >
+                {key}
+              </button>
+            ))
+          )}
         </div>
 
-        <div className="flex items-center gap-2.5">
-          {activeTabData?.length > 0 &&
-            activeTabData?.map((item) => {
-              return (
-                <div>
-                  <h2>{item?.title}</h2>
-                  <p>{item?.description}</p>
-                </div>
-              );
-            })}
+        {/* CARDS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {activeTabData.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl border border-gray-200 p-6
+                         hover:shadow-lg transition flex flex-col justify-between"
+            >
+              <div>
+                <h2 className="text-lg font-semibold mb-3">
+                  {item.title}
+                </h2>
+
+                <p className="text-sm text-gray-600 line-clamp-4">
+                  {item.description}
+                </p>
+              </div>
+
+              <p className="text-blue-600 text-sm font-medium mt-6 cursor-pointer">
+                Explore more →
+              </p>
+            </div>
+          ))}
         </div>
       </section>
+{/* 
+      <section >
+        <div className="grid place-items-center">
+          <button className="bg-blue-500 px-5 py-2 cursor-pointer">SEE ALL SERVICES</button>
+        </div>
+
+        <div className="bg-white">
+
+          <h1 className="text-blue-500 text-3xl">A smarter platform for better<br/> results.</h1>
+
+        <div>
+          {
+            data3.map((item,ind)=>(
+              <div key={ind}>
+                <img className="w-32 h-32 rounded-full" src={item.image}/>
+                <h1>{item.title}</h1>
+                <p>{item.content}</p>
+              </div>
+            ))
+          }
+
+        </div>
+        </div>
+
+      </section> */}
+      <section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+  {/* LEFT CONTENT */}
+  <div>
+    <h1 className="text-blue-600 text-3xl md:text-4xl font-semibold mb-10">
+      A smarter platform for better <br /> results.
+    </h1>
+
+    <div className="space-y-10">
+      {data3.map((item, ind) => (
+        <div key={ind} className="flex items-start gap-5">
+          
+          {/* ICON */}
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-12 h-12"
+          />
+
+          {/* TEXT */}
+          <div>
+            <h2 className="text-lg font-semibold mb-1">
+              {item.title}
+            </h2>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {item.content}
+            </p>
+          </div>
+
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div className="flex justify-center">
+    <img
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAe1BMVEUAAAD////y8vKnp6dfX1/j4+P19fXd3d2ampqkpKT5+fnNzc2YmJiFhYX8/Py4uLjZ2dnq6urFxcV2dna+vr5CQkIlJSUrKyusrKweHh4PDw87OztLS0sXFxdZWVkwMDBnZ2d+fn6Li4tISEg1NTVmZmZbW1t5eXkTExNGFVzqAAAESklEQVR4nO3Y6XbiOBCAUZfBO3jDCSYhxISE5v2fcOS9DExPODM5MH2++wdbTgQuSaXFsgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf6r1LLUzL1mOJX5k22mwUX+zKhzXS3a3V74P1M1X4oVOUenny7yu+On2in9UIlnp+0EkSVewlzjx/TIUv/+T10wifxE4Er3cWHkl9nC98SQNFkEqznNftHUlNxVnkv+rV/ivpbLvrrrG2vfBCfqgvIfOa3NxFOfG2uMwG64zu+1n29DtSg7irZuLlUQ3VvyTSjnrt89jm/XPorBv2J0E1i1Szx/6STJ806cU7YU3PFzJx00V/6QnWZ6VlDKOj7gJz1b9TRJurO/zxQr6136WmSpv+l0l1VAUjWPs3orsvCQuxutA3qw6DmPJk6y+X/nWDMtZ/64mPqN2VEbqy+dy/H7FP+rN9c9KdjIfb96bCLiJeu7ogR88q5uPi1nJNeEdYuKl6knU5KVwpops/S33tGvH+PpzGBFL3Zxte06GeqSy7MZRI2lxkRGKOhxDTOJSPSpdM0DXkz43idk97c1LzaNMJHb89vWCSUwyk1BeJz89CN/GmxfHXneXlyFZydYaY7KWhf7eui2OuktaiWs9htIx00FSbbfHUuxDXZJMEkzk1SN9q0r2slZ3Q1D8i5C8tDmjj8lBKvVwJ2ag/WozbWcxaYw7itIk/Gwv3524zg65p5/nWT07vKuS1eTOOjl23b8ue4mZhpuPPia7SWSf6i6yjHU6Wj5MTMQdMsJzs25KJ8O6jsnyLCa6ceueYgbTlZD0Y7CPSTWJyUG+TN+axOTjcWKyH2+a2fLGfmKC4rlXQjLkiuv95HDZTx4oJio7bOtkels+aYST9Nl4C/uZ9Xo+OT5yPrHVLGLVC/fpvOP8ft5p+JJl53Eqhhk7+N/NO4mrl+p1TJait76/X580fLPyH6fk1lKWu3ljV9hH82FdX5/8UkWPsz7R3XdTN+VOqrGkW8fqjbxztoGtQ2IS7SS2Vi5nTJmnE1W3jtVheph17JPOsSupp+VQ7XdmzUDS+51pWuhCYnjx3+wNhz3gQtSga7ternLX1yRr3ZWnflbUvHtwsS/We+diui/uQ2Jmn1BPIqNhbX9Sxwzdvngu1fjlj7MvXo2Haav2/U7j8U4i7Xouj/sRVk2nmEBFy3OnC5fOEBOrlH6TeOhPrVK3D+Red9h7S/rmW/QHPZXkb92j7o03/QnZ2XHYyVbZ98U532I3xpiY8VU1n19x3zk/3aw9Z/qQwnogvkgeBEU8dpgqrEtMnhya7j0VbxYk9vkvP+mb60e15ZiMTrk4ZVBmKrCvnqSmYlfKa/97Py+LIk3zyZhYmpJicgA3T9I0Ci6Wa/+s0hVvyyiNZpPDzspUnAfnax4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwB/oL038L1osQXcfAAAAAElFTkSuQmCC"
+  
+      className="max-w-md w-full"
+    />
+  </div>
+
+</section>
+
+<VirtualMeetingSection/>
+<OurSupporters/>
+<InTheNews/>
+<LatestArticlesCarousel/>
+<LatestProductsCarousel/>
+
     </>
   );
 };
