@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState} from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiMenu, HiX } from "react-icons/hi";
 import corpseed from "../../assets/corpseed.jpg";
+import { navData } from "../../data.js";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+
 
   return (
     <header className="sticky top-0 bg-white shadow-lg z-50">
