@@ -79,7 +79,7 @@ const ContactUs = () => {
 
         {/* RIGHT OFFICES (SCROLLABLE) */}
         <div className="w-full lg:w-[45%] bg-white p-6 sm:p-8 shadow-lg border border-gray-300 rounded-md 
-                        max-h-[520px] overflow-y-auto">
+                        max-h-130 overflow-y-auto">
 
           {/* NOIDA */}
           <div className="mb-8 space-y-3">

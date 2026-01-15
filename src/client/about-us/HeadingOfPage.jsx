@@ -187,6 +187,7 @@ const HeadingOfPage = () => {
           </div>
         </div>
       </section>
+      
     </div>
   );
 };

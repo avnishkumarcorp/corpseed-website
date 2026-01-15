@@ -1,13 +1,17 @@
 import React from 'react'
+import {useState} from 'react'
 import corpseed from "../../assets/corpseed.jpg";
+import { FaPlay } from "react-icons/fa";
+import advantagesImage from "../../assets/Advantages_of_an_EPR_Registration_for_EPR_Waste_Management_Corpseed.webp";
 
 
 const ScrollNavView_01 = () => {
+  const [playVideo, setPlayVideo] = useState(false);
   return (
     <div>
       <section
         id="overview"
-        className="scroll-mt-24 px-4 sm:px-6 lg:px-16 py-10"
+        className="scroll-mt-24 px-4  lg:px-16 py-10"
       >
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">
           An Overview of EPR for Plastic Waste Management
@@ -57,7 +61,52 @@ const ScrollNavView_01 = () => {
             responsibility of a producer for environmentally sound management of
             the product until the end of its life.
           </p>
-          <img src={corpseed} />
+          {/* <img src={corpseed} /> */}
+          <section className="max-w-7xl mx-auto md:px-6 py-20">
+      
+       <div className="border-2 border-blue-500 rounded-lg py-10 px-3 text-center">
+      {!playVideo ? (
+        <>
+          {/* LOGO */}
+          <div className="flex justify-center mb-4">
+            <img src={corpseed} alt="Corpseed" className="h-20" />
+          </div>
+
+          {/* TEXT */}
+          <h1 className="text-2xl md:text-3xl font-medium text-gray-800 mb-8">
+            Start your{" "}
+            <span className="text-blue-600 font-semibold">
+              EPR Plastic Registration
+            </span>{" "}
+            today!
+          </h1>
+
+          {/* PLAY BUTTON */}
+          <div className="flex justify-center">
+            <button
+              onClick={() => setPlayVideo(true)}
+              className="w-14 h-14 rounded-full bg-gray-300 shadow-lg flex items-center justify-center hover:scale-105 transition"
+            >
+              <FaPlay className="text-gray-700 ml-1" />
+            </button>
+          </div>
+        </>
+      ) : (
+        /* YOUTUBE IFRAME */
+        <div className="relative w-full aspect-video rounded-lg overflow-hidden ">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/c_ZsFEgrkMc?autoplay=1"
+            title="YouTube video"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </div>
+      )}
+    </div>
+
+    </section>
         </div>
 
         {/* ADVANTAGES SECTION */}
@@ -100,10 +149,10 @@ const ScrollNavView_01 = () => {
               </p>
             </li>
           </ul>
-          <img src={corpseed} />
+          <img src={advantagesImage} alt="Advantages of EPR Registration" />
           <p></p>
 
-          <h3 className="text-xl md:text-2xl font-semibold mb-6">
+          <h3 className="text-xl md:text-2xl font-semibold mb-6 mt-8">
             Extended Producer Responsibility (EPR) applies to the following
             plastic packaging categories:
           </h3>

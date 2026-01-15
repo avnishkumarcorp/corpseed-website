@@ -5,9 +5,9 @@ const Footer = () => {
     <footer className="border-t border-gray-200 bg-white">
       
       {/* TOP BAR */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="max-w-7xl  px-10 md:px-16 py-4 flex flex-row  sm:items-center sm:justify-between gap-4">
         
-        <div className="flex items-center gap-3 text-gray-700">
+        <div className="flex items-center gap-3 px-20 text-gray-700">
           <span className="font-medium">Follow Us :</span>
           <div className="flex gap-3 text-gray-500">
             <FaLinkedin className="hover:text-blue-600 cursor-pointer" />

@@ -53,8 +53,7 @@ const LogoCarousel = () => {
     >
       <button
         onClick={prev}
-        className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2
-                   bg-white shadow-md rounded-full p-2 z-10 hover:bg-gray-100"
+        className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10 hover:bg-gray-100"
       >
         <ChevronLeft size={24} />
       </button>
@@ -79,8 +78,7 @@ const LogoCarousel = () => {
 
       <button
         onClick={next}
-        className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2
-                   bg-white shadow-md rounded-full p-2 z-10 hover:bg-gray-100"
+        className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10 hover:bg-gray-100"
       >
         <ChevronRight size={24} />
       </button>

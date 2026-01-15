@@ -1,132 +1,316 @@
 import React from "react";
-import HeadingOfPage from "./HeadingofPage";
+import { FileText, MessageCircle, Shield } from "lucide-react";
+
 
 const AboutUs = () => {
   return (
     <>
-      <section className="flex flex-col lg:flex-row items-stretch p-6 max-w-7xl mx-auto gap-6">
-        {/* Left Column - Text */}
-        <div className="lg:w-1/2 flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-            Our values define who we are & what we stand for
+      {/* Hero Banner Section */}
+      <section className="relative w-full h-96 md:h-125 lg:h-175 overflow-hidden">
+        <img
+          src='https://www.corpseed.com/assets/images/begin-from.webp'
+          alt="About Us Hero"
+          className="w-full h-full object-cover"
+        />
+         {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 flex items-center justify-center sm:pl-6 md:pl-12 lg:pl-16">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-white drop-shadow-lg pt-16 sm:pt-20 px-4 sm:px-8">
+            About Us
           </h1>
-          <p className="text-gray-700 text-base md:text-lg text-justify">
-            The journey of Corpseed started with a simple thought: why do
-            companies fail even after having a great idea, good execution plan,
-            and cash flow. Why investors are worried about investing in Indian
-            startups and mid-sized businesses. Few of the key challenges are
-            changing regulatory framework, evolving environment and social
-            governance, acquiring government permissions and clearances and
-            compliant with internal audits etc. It seems like a pretty simple
-            concept — you comply with the rules and survive, but it’s not an
-            easy journey for a company to know the right set of legal and
-            regulatory requirements. To manage these hurdles we came up with a
-            concept of listing compliance requirements for products and services
-            at one place with an AI driven model, wherein management and other
-            stakeholders can have direct access to all compliance activities
-            within their organization to fill the gaps?
+        </div>
+      </section>
+
+      {/* Section 2 */}
+      <section className="py-15 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-left">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-6">
+              Our Story
+            </h2>
+            <p className="text-[#333333] text-lg md:text-xl leading-relaxed max-w-4xl">
+              At Corpseed, we believe in simplifying business compliance through innovative AI-driven solutions.
+              Our platform helps organizations navigate complex regulatory requirements with ease and confidence.
+              Our platform helps organizations navigate complex regulatory requirements with ease and confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Section 3*/}
+      <section className="relative w-full h-100 md:h-137.5 lg:h-175 overflow-hidden">
+        {/* Background Image */}
+      <img
+        src='https://www.corpseed.com/assets/images/ceo.webp'
+        alt="CEO Letter Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
+
+       {/* Content */}
+        <div className="relative z-10 h-full flex items-center">
+    <div className="max-w-3xl px-6 sm:px-10 lg:px-16 text-white">
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
+        A letter from our <br /> CEO
+      </h1>
+
+      <p className="mt-6 text-sm sm:text-base md:text-lg text-white/90">
+        Read about how the Corpseed team is committed to empowering startups, SMEs, and enterprises through technology-driven compliance solutions. Our mission is to simplify complex regulatory processes and enable businesses to move forward with confidence, transparency, and trust—every step of the way.
+      </p>
+
+      <button className="mt-8 px-6 py-3 bg-blue-500  text-white rounded-lg font-medium hover:bg-gray-900 transition">
+        Read CEO letter
+      </button>
+    </div>
+        </div>
+      </section>
+      {/* Section 4*/}
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="flex flex-col md:flex-row-reverse items-stretch gap-10">
+
+        {/* Right Blue Block */}
+        <div className="w-full md:w-[45%] h-62.5 md:h-87.5  bg-blue-100 rounded-lg flex items-center justify-center p-10">
+          <img
+            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6K2VXY9f58PTYSFtu3_xPykBnZ_XIYI-WA&s'
+            alt="Our Mission"
+            className="w-full lg:w-[60%] h-full object-cover rounded-lg"
+          />
+        </div>
+
+          {/* Left Content */}
+          <div className="flex-1 flex flex-col justify-center">
+      <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+        Who We Are
+      </h3>
+
+      <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+        Through helping Indian startups & businesses mitigate regulatory compliance risks through robust processes and AI-driven proprietary technology, we simplify business compliance whilst protecting the confidentiality and privacy of our customers. This enables our clients to save time and money, which can drive positive, sustainable change for our clients, our people and society at large.
+      </p>
+
+      <a
+        href="#"
+        className="mt-6 inline-block text-black font-medium underline underline-offset-4 w-fit"
+      >
+        
+      </a>
+          </div>
+
+        </div>
+      </section>
+      {/* Section 5 */}
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="flex flex-col md:flex-row-reverse items-stretch gap-10">
+
+        {/* Right Blue Block */}
+        <div className="w-full md:w-[45%] h-62.5 md:h-87.5  bg-blue-100 rounded-lg flex items-center justify-center p-10">
+          <img
+            src='https://www.corpseed.com/assets/img/Designs/Sustainability-02.png'
+            alt="Our Mission"
+            className="w-full lg:w-[60%] h-full object-cover rounded-lg"
+          />
+        </div>
+
+          {/* Left Content */}
+          <div className="flex-1 flex flex-col justify-center">
+      <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+        What We Stand For
+      </h3>
+
+      <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+       At Corpseed, we encourage and empower change in all we do. Every single day, we challenge ourselves to bring our absolute best to clients, to the public and to one another. We set ourselves apart through our affection and pride, our expertise and our eagerness, our inclusive culture and our focus on developing the leaders of tomorrow.
+      </p>
+
+      <a
+        href="#"
+        className="mt-6 inline-block text-black font-medium underline underline-offset-4 w-fit"
+      >
+      
+      </a>
+          </div>
+
+        </div>
+      </section>
+      
+     {/*section 6 */}
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="flex flex-col md:flex-row items-stretch gap-10">
+        <div className="w-full md:w-[35%] min-h-75  flex-1 bg-blue-500 rounded-lg flex items-center justify-start p-10">
+          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug">
+            Our Mission <br />
+            Simplify Business <br />
+            Compliance
+          </h2>
+        </div>
+
+        {/* Right Content */}
+        <div className=" flex-1 flex flex-col justify-center">
+          <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+        Our Mission
+          </h3>
+
+          <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+        At Corpseed, our mission is to simplify business compliance through technology-driven solutions. We aim to empower startups, SMEs, and enterprises by making regulatory processes transparent, efficient, and accessible—so businesses can focus on growth while we handle compliance.
+          </p>
+
+        </div>
+
+      </div>
+      </section>
+      {/* Section 7 */}
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="flex flex-col md:flex-row items-stretch gap-10">
+    
+        {/* Left Blue Block  */}
+        <div className="w-full md:w-[35%] min-h-75  flex-1 bg-blue-500 rounded-lg flex items-center justify-start p-10">
+          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug">
+            Our Vision <br />
+            Simplify Business <br />
+            Compliance
+          </h2>
+        </div>
+
+        {/* Right Content */}
+        <div className=" flex-1 flex flex-col justify-center">
+          <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+        Our Vision
+          </h3>
+          <p>Our vision is to become the most trusted technology-driven compliance partner for businesses worldwide. We aim to simplify complex regulatory processes, enable sustainable growth, and empower startups, SMEs, and enterprises to operate with confidence in an ever-evolving regulatory landscape.
+      
           </p>
         </div>
 
-        {/* Right Column - Image */}
-        <div className="lg:w-1/2 flex-shrink-0">
+      </div>
+      </section>
+   
+      {/* Section 8 */}
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        {/* Heading */}
+        <h2 className="text:2xl md:text-5xl text-center font-semibold mb-10">Where We Begin From</h2>
+
+          {/* Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+          {/* Left Card */}
+          <div>
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s"
-            alt="about-us"
-            className="w-full h-full object-cover rounded-lg"
+           
+            src='https://www.corpseed.com/assets/images/begin-from.webp'alt="Uber leadership"
+            className="w-full h-62.5 md:h-87.5 object-cover  mb-4"
+          />
+
+          <h3 className="text-xl font-semibold mb-2">
+          A Startup in 2017
+          </h3>
+
+          <p className="text-gray-600 text-lg mb-4">
+            A small team working out of a modest space in Delhi began its journey with big ambitions. We started by offering services such as startup business planning for funding, company incorporation, and intellectual property solutions. In our very first year, our services were trusted and appreciated by over 9,000 businesses.
+          </p>
+
+          <a
+            href="#"
+            className="text-black underline text-sm font-medium"
+          >
+            See our leadership
+          </a>
+          </div>
+
+         {/* Right Card */}
+          <div>
+          <img
+            src='https://www.corpseed.com/assets/images/ceo.webp' alt="Integrity"
+            className="w-full h-62.5 md:h-87.5 object-cover  mb-4"
+          />
+
+          <h3 className="text-xl font-semibold mb-2">
+            From CEO Desk
+          </h3>
+
+          <p className="text-gray-600 text-lg mb-4">
+           At Corpseed, our purpose is to build a stronger compliance ecosystem, inspire confidence, and empower positive change in your business. The insights and quality-driven services we deliver help build trust and confidence in managing regulatory compliance effectively.
+          </p>
+
+          <a
+            href="#"
+            className="text-black underline text-sm font-medium"
+          >
+            Learn more
+          </a>
+          </div>
+
+        </div>
+      </section>
+      {/* section 9 */}
+      <section className="max-w-7xl mx-auto px-4 py-16">
+      {/* Heading */}
+      <h2 className="text-4xl font-semibold mb-12">
+        Resources to Help You Succeed
+      </h2>
+
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        
+        {/* Licensing & Registration */}
+        <div>
+          <FileText className="w-10 h-10 mb-4" />
+          <h3 className="text-xl font-semibold mb-2 ">Licensing & Registration</h3>
+          <p className="text-gray-600 text-base mb-4">
+            Get expert assistance with business licensing, company registration, and all compliance documentation.
+          </p>
+         
+        </div>
+
+        {/* Compliance Consulting */}
+        <div>
+          <MessageCircle className="w-10 h-10 mb-4 " />
+          <h3 className="text-xl font-semibold mb-2">Compliance Consulting</h3>
+          <p className="text-gray-600 text-base mb-4">
+            Get personalized compliance advice and expert guidance to navigate regulatory requirements effectively.
+          </p>
+        
+        </div>
+
+        {/* Compliance Resources */}
+        <div>
+          <Shield className="w-10 h-10 mb-4 " />
+          <h3 className="text-xl font-semibold mb-2">
+            Compliance Resources
+          </h3>
+          <p className="text-gray-600 text-base mb-4">
+            Access guides, checklists, and tools to simplify your compliance journey and ensure regulatory adherence.
+          </p>
+       
+        </div>
+      </div>
+      </section>
+      {/* section 10 */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+        
+        {/* Left Content */}
+        <div className="max-w-xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+            Join Our Compliance <br /> Experts Team
+          </h2>
+
+          <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition">
+            View Career Opportunities
+          </button>
+        </div>
+
+        {/* Right Illustration */}
+        <div className="flex justify-center w-full lg:w-1/2">
+          <img
+            src='https://www.corpseed.com/assets/img/Designs/Environmental_main_image-03.png'
+            alt="Reimagine"
+            className="w-55 md:w-112.5"
           />
         </div>
+      </div>
       </section>
-
-      <section className="mx-auto max-w-7xl p-6">
-        <div className="flex flex-col md:flex-row items-stretch gap-6 bg-white shadow-lg rounded-lg overflow-hidden border border-blue-500 p-5">
-          <div className="bg-blue-500 text-white flex-1 flex items-center p-6 rounded-sm">
-            <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed text-left ">
-              Our Mission
-              <br /> Simplify Business
-              <br /> Compliance
-            </p>
-          </div>
-
-          <div className="flex-1 flex items-center p-6 text-gray-700">
-            <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-              Our AI-driven model and robust processes simplify business
-              compliance whilst protecting the confidentiality and privacy of
-              our customers. This enables them to save time and money. We focus
-              on making compliance easy, transparent, and efficient for every
-              organization.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="mx-auto max-w-7xl p-6">
-        <div className="flex flex-col md:flex-row items-stretch gap-6 bg-white shadow-lg rounded-lg overflow-hidden border border-blue-500 p-5">
-          <div className="flex-1 flex items-center p-6 text-gray-700">
-            <p className="text-sm md:text-base lg:text-lg leading-relaxed p-2">
-              By focusing on reducing our customers compliance cost, we will
-              achieve & sustain a positive growth and profitability.
-            </p>
-
-            <div className="bg-blue-500 text-white flex-1 flex items-center p-6 rounded-sm">
-              <div className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed text-left ">
-                <h2>Our Vision</h2>
-                <br /> <h2>Reducing</h2>
-                <br /> <h2>compliance cost</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="mx-auto max-w-7xl p-6">
-        <div className="flex flex-col md:flex-row items-stretch gap-6 bg-white shadow-lg rounded-lg border border-blue-500 overflow-hidden">
-          <div className="bg-blue-500 text-white flex-1 flex items-center p-6 rounded-sm">
-            <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed text-left">
-              Our Values
-              <br /> Integrity,
-              <br /> Responsibility,
-              <br /> Accountability &
-              <br /> Continuous Improvement
-            </p>
-          </div>
-
-          <div className="flex-1 flex flex-col justify-center p-6 text-gray-700 gap-4">
-            <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify">
-              <b>Integrity</b> - We believe that nothing is more important than
-              our stakeholder’s reputation, growth, and confidentiality.
-              Behaving with the highest levels of integrity is fundamental to
-              who we are. We demonstrate a strong commitment to sustainable,
-              transparent & responsible business practices. Adhere to the
-              highest professional standards and credibility. We do what is
-              right.
-            </p>
-
-            <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-              <b>Responsibility & Accountability</b> - We at Corpseed are
-              personally accountable and jointly responsible for the
-              transparency, security, and on-time delivery of quality services
-              to avoid non-compliance losses for our clients.
-            </p>
-
-            <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-              <b>Caring & Development</b>
-              Our caring approach complements our agility and speed. We make the
-              effort to understand every stakeholder and what matters to them.
-              We also recognize the value that each person contributes and
-              support others to grow and work in the ways that bring out their
-              best. We treat each other with respect, our motto is to create an
-              environment in which people are proud and happy to work
-            </p>
-            <p className="text-sm md:text-base lg:text-lg leading-relaxed">
-              <b>Continuos & development-</b>
-              We never stop larning and improving.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <HeadingOfPage />
+     
     </>
   );
 };
-
 export default AboutUs;
